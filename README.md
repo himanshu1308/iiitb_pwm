@@ -26,7 +26,42 @@ The key components we need for this particular circuit are an n-bit counter and 
 
 
 ![imgonline-com-ua-ReplaceColor-wXK8pJ09VILEr](https://user-images.githubusercontent.com/44607144/183286538-7cf5b813-cd0d-4a8c-8ea9-8d2a3c393f44.jpg)
+
+
 Since the counter is sequential and the comparator is a combinational circuit, there may be an intermediate state like 111 that is higher or lower than duty when counting from 011 to 100 as a result of inappropriate delays. A glitch might result from this. The output of the comparator is routed through a D flipflop in order to prevent these errors.
+
+# Iverilog
+Icarus Verilog is a Verilog simulation and synthesis tool. It operates as a compiler, compiling source code written in Verilog (IEEE-1364) into some target format. For batch simulation, the compiler can generate an intermediate form called vvp assembly. This intermediate form is executed by the ``vvp'' command. For synthesis, the compiler generates netlists in the desired format.
+# GTK Wave
+GTKWave is a fully featured GTK+ based wave viewer for Unix and Win32 which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.
+<h3> Installing Iverilog and GTKWave</h3>
+open terminal and type following commands
+
+* sudo apt-get update from terminal.
+* sudo apt-get install iverilog.
+* sudo apt-get install gtkwave.
+
+# Functional Characterstics
+Simulation results with increasing Duty Cycle.
+
+![Screenshot from 2022-08-07 16-33-06](https://user-images.githubusercontent.com/44607144/183287636-9628f615-2ffc-425b-b3f9-ac90a9533543.png)
+
+Simulation results with decreasing Duty Cycle.
+
+![Screenshot from 2022-08-07 16-33-23](https://user-images.githubusercontent.com/44607144/183287643-043bfe04-4bcb-40eb-a6d5-9d801a8d929f.png)
+
+# Contributors
+* **Himanshu Kumar Rai**
+* **Kunal Ghosh**
+# Acknowledgments
+* Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+# Contact Information
+* Himanshu Kumar Rai, MS, International Institute of Information Technology, Bangalore himanshukumar.rai@iiitb.ac.in
+* Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. kunalghosh@gmail.com
+
+# Refrences:
+* FPGA4Student https://www.fpga4student.com/2017/08/verilog-code-for-pwm-generator.html
+* https://en.wikipedia.org/wiki/Pulse-width_modulation
 
 
 
