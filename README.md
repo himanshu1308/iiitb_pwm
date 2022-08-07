@@ -42,13 +42,7 @@ open terminal and type following commands
 * sudo apt-get install gtkwave.
 
 # Functional Characterstics
-Simulation results with increasing Duty Cycle.
 
-![Screenshot from 2022-08-07 16-33-06](https://user-images.githubusercontent.com/44607144/183287636-9628f615-2ffc-425b-b3f9-ac90a9533543.png)
-
-Simulation results with decreasing Duty Cycle.
-
-![Screenshot from 2022-08-07 16-33-23](https://user-images.githubusercontent.com/44607144/183287643-043bfe04-4bcb-40eb-a6d5-9d801a8d929f.png)
 
 # Contributors
 * **Himanshu Kumar Rai**
