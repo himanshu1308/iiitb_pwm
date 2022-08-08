@@ -44,6 +44,11 @@ open terminal and type following commands
 # Functional Characterstics
 
 
+![Screenshot from 2022-08-08 19-55-35](https://user-images.githubusercontent.com/44607144/183441376-346143ff-c51a-460c-9918-6df338a2922b.png)
+
+
+
+
 # Contributors
 * **Himanshu Kumar Rai**
 * **Kunal Ghosh**
