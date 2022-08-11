@@ -47,7 +47,21 @@ open terminal and type following commands
 ![Screenshot from 2022-08-08 19-55-35](https://user-images.githubusercontent.com/44607144/183441376-346143ff-c51a-460c-9918-6df338a2922b.png)
 
 
+# Synthesis Of Verilog Code
+<h3> About Yosys </h3>
+This is a framework for RTL synthesis tools. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 
+Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
+
+Yosys is free software licensed under the ISC license (a GPL compatible license that is similar in terms to the MIT license or the 2-clause BSD license).
+More information and documentation can be found on the Yosys web site:
+* https://yosyshq.net/yosys/
+
+* To install yosys, You can follow this link https://github.com/YosysHQ/yosys
+<h3> Synthesize</h3>
+$ yoysys
+
+$ script yosys_run.sh
 
 # Contributors
 * **Himanshu Kumar Rai**
