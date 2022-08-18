@@ -58,7 +58,13 @@ More information and documentation can be found on the Yosys web site:
 * https://yosyshq.net/yosys/
 
 * To install yosys, You can follow this link https://github.com/YosysHQ/yosys
-<h3> Synthesize</h3>
+<h3> Synthesis </h3>
+The straightforward RTL design is converted via synthesis into a gate-level netlist with all the limitations provided by the designer. Synthesis is a technique that, in the simplest words possible, turns an abstract design into a correctly implemented device in terms of logic gates.
+
+<h3>Synthesizer</h3>
+It is a tool that helps designer in synthesis. it first converts RTL into simple logic gates, mapping those gates to logic gates available in technology library and finally optimise the the mapped netlist keeping the constraints set by designer intact.
+
+<h3>  To Synthesize</h3>
 
 ```
 $   yosys
