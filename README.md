@@ -79,6 +79,7 @@ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 primitives.v sky130_fd_sc_hd.v iiitb_pwm_g
 ./a.out
 gtkwave pwm.vcd
 ```
+I have primitives.v and sky123_fd_sc_hd.v in same folder with design files, if not so than kindly provide whole path in the 1st line of commands above.
 The output waveform for the RTL design file should match the gtkwave output for the netlist. We can use the same testbench and compare the waveforms because the netlist and design code have the same set of inputs and outputs.
 
 #### GLS waveform
