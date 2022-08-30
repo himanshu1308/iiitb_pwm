@@ -158,7 +158,8 @@ $ sudo docker run hello-world (If the docker is successfully installed u will ge
 for more about docker installation you can check the following link: https://docs.docker.com/engine/install/ubuntu/
 After installing Docker we are ready for OpenLane installation.
 
-####OpenLane Installation
+#### OpenLane Installation
+
 first go to home directory->
 ```
 
@@ -170,8 +171,41 @@ $ make
 
 $ make test
 ```
+If it ended with saying Basic test passed then open lane installed succesfully.
+
+## Magic
+
+The venerable VLSI layout tool Magic was created in the 1980s at Berkeley by John Ousterhout, who is now best known for creating the scripting language Tcl. Magic has maintained its popularity among colleges and small businesses in great part because of its permissive Berkeley open-source licence. The open-source licence has made it possible for VLSI experts with a programming inclination to put innovative ideas into practise and support magic's further advancement in fabrication technology. The well-designed basic algorithms, however, are what give magic the most of its notoriety. Even those who finally rely on commercial tools for their product design flow frequently identify magic as the most user-friendly tool for circuit layout.
+You can find More about Magic at: http://opencircuitdesign.com/magic/index.html
+
+### Installation 
+Before installation Magic install the following softwares first:
+```
+$   sudo apt-get install m4
+$   sudo apt-get install tcsh
+$   sudo apt-get install csh
+$   sudo apt-get install libx11-dev
+$   sudo apt-get install tcl-dev tk-dev
+$   sudo apt-get install libcairo2-dev
+$   sudo apt-get install mesa-common-dev libglu1-mesa-dev
+$   sudo apt-get install libncurses-dev
+```
+After running all the above commands we will finally proceed for magic installation.
+
+#### Magic Installation
+
+First go to home directory and open terminal and write the following commands-> 
+```
+$   git clone https://github.com/RTimothyEdwards/magic
+$   cd magic/
+$   ./configure
+$   sudo make
+$   sudo make install
+```
+After installation type *magic* in terminal a magic window will pop up, which means magic is installed properly.
 
 
+![magic_inst](https://user-images.githubusercontent.com/44607144/187528985-31be0280-1cf8-45d6-be31-c650d4c85377.png)
 
 
 # Contributors
