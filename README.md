@@ -112,6 +112,19 @@ Place and Route (PnR), the central component of any ASIC implementation, is carr
   - Performing detailed routing ([TritonRoute](https://github.com/The-OpenROAD-Project/TritonRoute))
 * #### GDSII Generation
   - Streaming out the final GDSII layout file from the routed def ([Magic](https://github.com/RTimothyEdwards/magic)).
+## OpenLane
+
+OpenLANE is an opensource tool or flow used for opensource tape-outs. The OpenLANE flow comprises a variety of tools such as Yosys, ABC, OpenSTA, Fault, OpenROAD app, Netgen and Magic which are used to harden chips and macros, i.e. generate final GDSII from the design RTL. The primary goal of OpenLANE is to produce clean GDSII with no human intervention. OpenLANE has been tuned to function for the Google-Skywater130 Opensource Process Design Kit.
+
+![OLF](https://user-images.githubusercontent.com/44607144/187524153-774861d2-20f5-459a-a1e5-cac6c19926b0.png)
+More about Openlane at : https://github.com/The-OpenROAD-Project/OpenLane
+
+### Instalaation Instructions 
+```
+apt install -y build-essential python3 python3-venv python3-pip
+```
+
+
 
 # Contributors
 * **Himanshu Kumar Rai**
