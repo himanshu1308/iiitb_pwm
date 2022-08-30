@@ -207,6 +207,29 @@ After installation type *magic* in terminal a magic window will pop up, which me
 
 ![magic_inst](https://user-images.githubusercontent.com/44607144/187528985-31be0280-1cf8-45d6-be31-c650d4c85377.png)
 
+## Klayout
+
+KLayout is a GDS and OASIS file viewer.KLayout is published under GNU public license GPL version 2 or any later version (www.gnu.org) in compliance with the requirements for using the Qt open source licence.
+
+#### Installation 
+```
+$ sudo apt-get install klayout
+```
+
+## NgSpice
+
+ngspice is the open source spice simulator for electric and electronic circuits. ngspice offers a wealth of device models for active, passive, analog, and digital elements. Model parameters are provided by our collections, by the semiconductor device manufacturers, or from semiconductor foundries. The user adds her circuits as a netlist, and the output is one or more graphs of currents, voltages and other electrical quantities or is saved in a data file. It  does not provide schematic entry. Its input is command line or file based. There are however third party interfaces available.
+
+#### Installation
+```
+$ sudo apt-get install ngspice
+```
+
+
+
+
+
+
 
 # Contributors
 * **Himanshu Kumar Rai**
@@ -220,6 +243,8 @@ After installation type *magic* in terminal a magic window will pop up, which me
 # Refrences:
 * FPGA4Student https://www.fpga4student.com/2017/08/verilog-code-for-pwm-generator.html
 * https://en.wikipedia.org/wiki/Pulse-width_modulation
+* https://www.klayout.de/
+* https://docs.docker.com/engine/install/ubuntu/
 
 
 
