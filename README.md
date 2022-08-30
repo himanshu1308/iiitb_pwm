@@ -215,6 +215,10 @@ KLayout is a GDS and OASIS file viewer.KLayout is published under GNU public lic
 ```
 $ sudo apt-get install klayout
 ```
+To open just type Klayout in terminal, a window will appear as shown below.
+
+![klayou](https://user-images.githubusercontent.com/44607144/187532283-6520bd75-87a3-4ea2-b619-6739544743bb.png)
+
 
 ## NgSpice
 
@@ -245,6 +249,7 @@ $ sudo apt-get install ngspice
 * https://en.wikipedia.org/wiki/Pulse-width_modulation
 * https://www.klayout.de/
 * https://docs.docker.com/engine/install/ubuntu/
+* https://ngspice.sourceforge.io/
 
 
 
