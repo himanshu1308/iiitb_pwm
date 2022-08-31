@@ -555,12 +555,26 @@ sudo make mount
 ```
 All the steps will be automated and all the files will be generated.
 
-![inv_netlist](https://user-images.githubusercontent.com/44607144/187738744-89edcb49-9509-4cdb-8b93-3e09247dd54d.png)
+
+![nonint1](https://user-images.githubusercontent.com/44607144/187742255-61f9dc8f-b092-4c5d-8efc-28e4d5e2a041.png)
+
 
 After running all the steps flow complete message will apperas shown below.
 
 
 ![flowcomp](https://user-images.githubusercontent.com/44607144/187742016-4c2f0b4f-cfa1-44a4-af58-3c06a999e0d9.png)
+
+After the flow complete message open terminal and write following commands to view layout in klayout:
+```
+cd /home/himanshu/OpenLane/designs/iiitb_pwm_gen/runs/RUN_2022.08.31_17.08.00/results/signoff
+klayout iiitb_pwm_gen.mag
+```
+![klayout1](https://user-images.githubusercontent.com/44607144/187743942-66528e66-baa2-4fcc-923e-9283d00d72b2.png)
+
+*Layout View*
+![klayout2](https://user-images.githubusercontent.com/44607144/187743956-f544cd60-6e06-4e79-81c2-93dd5b5342f5.png)
+
+
 
 
 
