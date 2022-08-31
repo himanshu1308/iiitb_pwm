@@ -328,7 +328,11 @@ In Magic Layout window, first source the .mag file for the design (here inverter
 
 ![portVGND](https://user-images.githubusercontent.com/44607144/187693437-8cf50fe2-6fdf-4196-97a9-8f3dea7b3347.JPG)
 
-![port_class_use_1](https://user-images.githubusercontent.com/44607144/187693705-7e7ddd79-a702-4ce6-87e3-07e1632d5ef4.JPG
+![port_class_use](https://user-images.githubusercontent.com/44607144/187694055-cd3c1b30-a729-4253-94a9-21483cd66fb7.JPG)
+
+### Standard cell Lef generation
+
+
 
 
 
