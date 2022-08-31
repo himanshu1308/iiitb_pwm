@@ -416,15 +416,109 @@ The contents of the merged.nom.lef file should contain the Macro definition of s
 
 ![stat_synth](https://user-images.githubusercontent.com/44607144/187703037-cb0a06c0-c471-4723-8dd9-e6ce087b4b53.png)
 
+* Calcuation of Flop Ratio:
+```
 Flop ratio = Number of D Flip flops 
              ______________________
              Total Number of cells
+```
              
 The flop ratio of my design is 0.21229
 
-Timing contraints of design:
+The sky130_vsdinv should also reflect in your netlist after synthesis
+
+![inv_netlist](https://user-images.githubusercontent.com/44607144/187710602-6d56682e-1e91-4ee7-a27d-41888a06cd75.png)
+
+
+*Timing contraints of design:*
 
 ![timing const](https://user-images.githubusercontent.com/44607144/187705920-e7c6a25c-c640-441f-a3f0-47e110383352.png)
+
+## Floorplan
+```
+% run_floorplan
+```
+#### Floorplan Results 
+* Die Area
+
+![die area](https://user-images.githubusercontent.com/44607144/187708931-7c96b758-215d-4165-a67c-be92fa9eca5c.png)
+
+* Core area
+
+![core area](https://user-images.githubusercontent.com/44607144/187709019-46a255e4-1ba4-48d2-a833-cb04e8e5e17d.png)
+
+For floorplan view navigate to /home/himanshu/OpenLane/designs/iiitb_pwm_gen/runs/RUN_2022.08.30_14.11.34/results/floorplan and then type the following magic command :
+```
+magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read lef ../../tmp/merged.nom.lef def read iiitb_pwm_gen.def &
+```
+![fpcmd](https://user-images.githubusercontent.com/44607144/187711778-34e7a4a6-5d8c-495a-8685-625dadf6efa9.png)
+
+*Floorplan View*
+
+![floorplan_1](https://user-images.githubusercontent.com/44607144/187711929-6eedce34-bbb2-4d45-8dea-1439e3f85892.png)
+
+## Placement
+```
+% run_placement
+```
+Navigate to /home/himanshu/OpenLane/designs/iiitb_pwm_gen/runs/RUN_2022.08.30_14.11.34/results/placement and type magic command:
+
+```
+magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read lef ../../tmp/merged.nom.lef def read iiitb_pwm_gen.def &
+```
+![pcmd](https://user-images.githubusercontent.com/44607144/187713407-8a96d8e6-8f32-402d-88cd-0d854809f172.png)
+
+*Placement View*
+
+
+![placement](https://user-images.githubusercontent.com/44607144/187713554-e47c12cf-6706-4116-878b-4f48fbd8280d.png)
+
+![place2](https://user-images.githubusercontent.com/44607144/187713842-abcaa520-b0c1-4a68-9e81-0e0985d6fbc2.png)
+
+*sky130_vsdinv placement view*
+
+![vsdinvview](https://user-images.githubusercontent.com/44607144/187714527-b9ded0f5-856f-47f5-8747-952886e11e87.png)
+
+## Clock Tree Synthesis(CTS)
+
+```
+% run_cts
+```
+## Routing
+
+```
+% run_routing
+```
+Navigate to /home/himanshu/OpenLane/designs/iiitb_pwm_gen/runs/RUN_2022.08.30_14.11.34/results/placement and type magic command:
+
+```
+magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read lef ../../tmp/merged.nom.lef def read iiitb_pwm_gen.def &
+```
+![routcmd](https://user-images.githubusercontent.com/44607144/187716273-fc8fb165-c338-4556-9e51-1fe967773c1c.png)
+
+* Routing View*
+
+![routing](https://user-images.githubusercontent.com/44607144/187715850-edf04072-2b0c-4196-9f48-ad6d2eb7dd16.png)
+
+
+![routing2](https://user-images.githubusercontent.com/44607144/187716598-be790a9e-de74-4847-9388-011e9b6f0f79.png)
+
+*sky130_vsdinv routing view*
+
+
+![vsdinv_routing](https://user-images.githubusercontent.com/44607144/187716720-6e9063d7-bf35-4007-b014-d19a46343c41.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Contributors
 * **Himanshu Kumar Rai**
