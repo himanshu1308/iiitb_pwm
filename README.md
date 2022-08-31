@@ -70,6 +70,13 @@ It is a tool that helps designer in synthesis. it first converts RTL into simple
 $   yosys
 $   yosys>    script yosys_run.sh
 ```
+After running
+```stat```
+it gives stat as shown below:
+
+![stat](https://user-images.githubusercontent.com/44607144/187744985-725850f4-6366-489e-ba71-68bb38aeaa5a.png)
+
+
 # Gate Level Simulation
 By running the test bench with the netlist file produced by the synthesis as the design under test, GLS generates the simulation results. Since Netlist and RTL code are logically equivalent, the same test bench can be utilised. This is done to check the design's logical accuracy once it has been synthesised. Making sure the design's timing is satisfied.
 
