@@ -242,7 +242,8 @@ $ magic -![cell_design](https://user-images.githubusercontent.com/44607144/18767
 T sky130A.tech sky130_inv.mag &
 ```
 
-![Uploading cell_design.png…]()
+![cell_design](https://user-images.githubusercontent.com/44607144/187680892-324061b8-e310-4bee-9618-bb334427096e.png)
+
 
 In Sky130 the first layer is called the local interconnect layer or Locali.
 
@@ -310,11 +311,24 @@ The above timing parameters can be computed by noting down various values from t
 
 ```Cell fall delay = (4.07479 - 4.05) = 24.79ps```
 
+## Creating Port definition for custom inverter cell
+```
+$ magic -T sky130A.tech sky130_vsdinv.mag
+```
+In Magic Layout window, first source the .mag file for the design (here inverter). Then Edit >> Text which opens up a dialogue box.
 
 
 
+![portA](https://user-images.githubusercontent.com/44607144/187693242-62de42df-7d77-4111-adcf-cfde02484d23.JPG)
 
 
+![portY](https://user-images.githubusercontent.com/44607144/187693284-43e43bb0-aa04-4e2b-8200-987c29faada7.JPG)
+
+![portVPWR](https://user-images.githubusercontent.com/44607144/187693317-761ee7c2-8cdf-4e69-9a59-76f674e23879.JPG)
+
+![portVGND](https://user-images.githubusercontent.com/44607144/187693437-8cf50fe2-6fdf-4196-97a9-8f3dea7b3347.JPG)
+
+![port_class_use_1](https://user-images.githubusercontent.com/44607144/187693705-7e7ddd79-a702-4ce6-87e3-07e1632d5ef4.JPG
 
 
 
