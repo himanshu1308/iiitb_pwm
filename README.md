@@ -228,6 +228,89 @@ ngspice is the open source spice simulator for electric and electronic circuits.
 ```
 $ sudo apt-get install ngspice
 ```
+# Creating a custom Inverter Cell
+
+open the openlane folder in terminal, and run the following commands:
+```
+$ git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+
+$ cd vsdstdcelldesign
+
+$  cp ./libs/sky130A.tech sky130A.tech
+
+$ magic -![cell_design](https://user-images.githubusercontent.com/44607144/187679016-4073b574-d562-4b93-bfaa-a4b057ebaa6d.png)
+T sky130A.tech sky130_inv.mag &
+```
+
+![Uploading cell_design.png…]()
+
+In Sky130 the first layer is called the local interconnect layer or Locali.
+
+To verify whether the layout is that of CMOS inverter, verification of P-diffusiona nd N-diffusion regions with Polysilicon can be observed.
+
+Other verification steps are to check drain and source connections. The drains of both PMOS and NMOS must be connected to output port (here, Y) and the sources of both must be connected to power supply VDD (here, VPWR).
+*LEF or library exchange format:* A format that tells us about cell boundaries, VDD and GND lines. It contains no info about the logic of circuit and is also used to protect the IP.
+*SPICE extraction:* Within the Magic environment, following commands are used in tkcon to achieve .mag to .spice extraction:
+```
+extract all
+ext2spice cthresh 0 rethresh 0
+ext2spice
+```
+![magic1](https://user-images.githubusercontent.com/44607144/187679209-07e76256-9a77-44ed-87fe-0edcd0edc664.png)
+
+This generates the sky130_in.spice file. This SPICE deck is edited to include pshort.lib and nshort.lib which are the PMOS and NMOS libraries respectively. In addition, the minimum grid size of inverter is measured from the magic layout and incorporated into the deck as: .option scale=0.01u. The model names in the MOSFET definitions are changed to pshort.model.0 and nshort.model.0 respectively for PMOS and NMOS.
+
+Finally voltage sources and simulation commands are defined as follows:
+```
+VDD VPWR 0 3.3V
+VSS VGND 0 0
+Va A VGND PUSLE(0V 3.3V 0 0.1ns 0.1 ns 2ns 4ns)
+.tran 1n 20n
+.control
+run 
+.endc
+.end
+```
+The final sky130_inv.spice file is modified to:
+
+![spice file](https://user-images.githubusercontent.com/44607144/187679532-0eb3552a-aa26-4cf6-a8e1-7b5dcb47d766.png)
+
+For simulation, ngspice is invoked in the terminal:
+```
+ngspice sky130_inv.spice
+```
+The output "y" is to be plotted with "time" and swept over the input "a":
+
+```
+plot y vs time a
+```
+
+
+![ng_spice](https://user-images.githubusercontent.com/44607144/187679809-52e78e3b-5f1f-4b0b-be3c-37faed631552.png)
+
+The waveform obtained is shown below:
+
+
+![ng_plot](https://user-images.githubusercontent.com/44607144/187679907-8a7c6278-e2b1-4f7b-af6c-6d2c9217e52a.png)
+
+Four timing parameters are used to characterize the inverter standard cell:
+
+1. Rise transition: Time taken for the output to rise from 20% of max value to 80% of max value
+2. Fall transition- Time taken for the output to fall from 80% of max value to 20% of max value
+3. Cell rise delay = time(50% output rise) - time(50% input fall)
+4. Cell fall delay  = time(50% output fall) - time(50% input rise)
+
+The above timing parameters can be computed by noting down various values from the ngspice waveform.
+
+```Rise transition = (2.23843 - 2.17935) = 59.08ps```
+
+```Fall transition = (4.09291 - 4.05004) = 42.87ps```
+
+```Cell rise delay = (2.20636 - 2.15) = 56.36ps```
+
+```Cell fall delay = (4.07479 - 4.05) = 24.79ps```
+
+
 
 
 
