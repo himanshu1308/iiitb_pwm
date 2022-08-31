@@ -332,6 +332,55 @@ In Magic Layout window, first source the .mag file for the design (here inverter
 
 ### Standard cell Lef generation
 
+Before the CMOS Inverter standard cell LEF is extracted, the purpose of ports must be defined:
+
+Select port A in magic:
+```
+port class input
+port use signal
+```
+Select Y area
+```
+port class output
+port class signal
+```
+Select VPWR area
+```
+port class inout
+port use power
+```
+
+Select VGND area
+```
+port class inout
+port use ground
+```
+
+LEF extraction can be carried out in tkcon as follows:
+
+```
+lef write
+```
+# Layout
+The layout is generated using OpenLane. To run a custom design on openlane, Navigate to the openlane folder and run the following commands:
+```
+$ cd designs
+
+$ mkdir iiitb_pwm_gen
+
+$ cd iiitb_pwm_gen
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_pwm_gen.v
+```
+
+Copy ```sky130_fd_sc_hd__fast.lib```, ```sky130_fd_sc_hd__slow.lib```, ```sky130_fd_sc_hd__typical.lib```and ```sky130_vsdinv.lef``` files to src folder in your design.
+
 
 
 
