@@ -381,7 +381,15 @@ $ touch iiitb_pwm_gen.v
 
 Copy ```sky130_fd_sc_hd__fast.lib```, ```sky130_fd_sc_hd__slow.lib```, ```sky130_fd_sc_hd__typical.lib```and ```sky130_vsdinv.lef``` files to src folder in your design.
 
+The contents of src file is shown below:
 
+![sourcefile](https://user-images.githubusercontent.com/44607144/187699339-92d58636-c4b2-4466-99b2-ff65197ccef3.png)
+
+The contents of json file should be modified as:
+
+![json](https://user-images.githubusercontent.com/44607144/187699801-175a52d8-6931-4893-abab-60fd1c2c2e7e.png)
+
+Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :
 
 
 
