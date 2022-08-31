@@ -361,7 +361,8 @@ LEF extraction can be carried out in tkcon as follows:
 ```
 lef write
 ```
-# Layout
+# Generating Layout
+## Interactive Mode 
 The layout is generated using OpenLane. To run a custom design on openlane, Navigate to the openlane folder and run the following commands:
 ```
 $ cd designs
@@ -388,6 +389,7 @@ The contents of src file is shown below:
 The contents of json file should be modified as:
 
 ![json](https://user-images.githubusercontent.com/44607144/187699801-175a52d8-6931-4893-abab-60fd1c2c2e7e.png)
+
 
 Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :
 ```
@@ -496,7 +498,7 @@ magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 ```
 ![routcmd](https://user-images.githubusercontent.com/44607144/187716273-fc8fb165-c338-4556-9e51-1fe967773c1c.png)
 
-* Routing View*
+*Routing View*
 
 ![routing](https://user-images.githubusercontent.com/44607144/187715850-edf04072-2b0c-4196-9f48-ad6d2eb7dd16.png)
 
@@ -508,12 +510,57 @@ magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 
 ![vsdinv_routing](https://user-images.githubusercontent.com/44607144/187716720-6e9063d7-bf35-4007-b014-d19a46343c41.png)
 
+*Area Report*
+
+![area](https://user-images.githubusercontent.com/44607144/187734979-a3921cd6-60e1-49f0-a6a0-40ecb9684eea.png)
+
+# Viewing Layout in klayout
+
+![kl1](https://user-images.githubusercontent.com/44607144/187735941-01d77ed5-8feb-4c58-80d9-73d207318587.png)
+
+## Non Interactive Mode 
+
+Here we are generating the layout in the non-interactive mode or the automatic mode. In this we cant interact with the flow in the middle of each stage of the flow.The flow completes all the stages starting from synthesis until you obtain the final layout and the reports of various stages which specify the violations and problems if present during the flow.
+
+```
+$ cd designs
+
+$ mkdir iiitb_pwm_gen
+
+$ cd iiitb_pwm_gen
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_pwm_gen.v
+```
+Copy ```sky130_fd_sc_hd__fast.lib```, ```sky130_fd_sc_hd__slow.lib```, ```sky130_fd_sc_hd__typical.lib```and ```sky130_vsdinv.lef``` files to src folder in your design.
+
+The contents of src file is shown below:
+
+![sourcefile](https://user-images.githubusercontent.com/44607144/187699339-92d58636-c4b2-4466-99b2-ff65197ccef3.png)
+
+The contents of json file should be modified as:
+
+![json](https://user-images.githubusercontent.com/44607144/187699801-175a52d8-6931-4893-abab-60fd1c2c2e7e.png)
+
+Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :
+
+```
+sudo make mount
+./flow.tcl -design iiitb_pwm_gen
+```
+All the steps will be automated and all the files will be generated.
+
+![inv_netlist](https://user-images.githubusercontent.com/44607144/187738744-89edcb49-9509-4cdb-8b93-3e09247dd54d.png)
+
+After running all the steps flow complete message will apperas shown below.
 
 
-
-
-
-
+![flowcomp](https://user-images.githubusercontent.com/44607144/187742016-4c2f0b4f-cfa1-44a4-af58-3c06a999e0d9.png)
 
 
 
