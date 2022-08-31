@@ -444,6 +444,7 @@ The sky130_vsdinv should also reflect in your netlist after synthesis
 ![timing const](https://user-images.githubusercontent.com/44607144/187705920-e7c6a25c-c640-441f-a3f0-47e110383352.png)
 
 ## Floorplan
+In the VLSI physical design, floorplanning is an essential design step, as it determines the size, shape, and locations of modules in a chip and as such it estimates the total chip area, the interconnects, and, delay.
 ```
 % run_floorplan
 ```
@@ -456,6 +457,8 @@ The sky130_vsdinv should also reflect in your netlist after synthesis
 
 ![core area](https://user-images.githubusercontent.com/44607144/187709019-46a255e4-1ba4-48d2-a833-cb04e8e5e17d.png)
 
+Post the floorplan run, a .def file will have been created within the results/floorplan directory. We may review floorplan files by checking the floorplan.tcl. The system defaults will have been overriden by switches set in conifg.tcl and further overriden by switches set in sky130A_sky130_fd_sc_hd_config.tcl.
+
 For floorplan view navigate to /home/himanshu/OpenLane/designs/iiitb_pwm_gen/runs/RUN_2022.08.30_14.11.34/results/floorplan and then type the following magic command :
 ```
 magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read lef ../../tmp/merged.nom.lef def read iiitb_pwm_gen.def &
@@ -467,6 +470,8 @@ magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 ![floorplan_1](https://user-images.githubusercontent.com/44607144/187711929-6eedce34-bbb2-4d45-8dea-1439e3f85892.png)
 
 ## Placement
+Placement is the process of placing the standard cells inside the core boundary in an optimal location. The tool tries to place the standard cell in such a way that the design should have minimal congestions and the best timing.
+
 ```
 % run_placement
 ```
@@ -489,11 +494,13 @@ magic -T /home/himanshu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 ![vsdinvview](https://user-images.githubusercontent.com/44607144/187714527-b9ded0f5-856f-47f5-8747-952886e11e87.png)
 
 ## Clock Tree Synthesis(CTS)
+Clock Tree Synthesis is a technique for distributing the clock equally among all sequential parts of a VLSI design. The purpose of Clock Tree Synthesis is to reduce skew and delay. Clock Tree Synthesis is provided the placement data as well as the clock tree limitations as input.
 
 ```
 % run_cts
 ```
 ## Routing
+Making physical connections between signal pins using metal layers are called Routing. Routing is the stage after CTS and optimization where exact paths for the interconnection of standard cells and macros and I/O pins are determined.
 
 ```
 % run_routing
