@@ -390,8 +390,41 @@ The contents of json file should be modified as:
 ![json](https://user-images.githubusercontent.com/44607144/187699801-175a52d8-6931-4893-abab-60fd1c2c2e7e.png)
 
 Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :
+```
+$ sudo make mount
+$ ./flow.tcl -interactive
+```
+A tcl console will be opened, now we will give following commands:
+```
+% package require openlane 0.9
+% prep -design iiitb_pwm_gen
+```
+The following commands are to merge external the lef files to the merged.nom.lef. In our case sky130_vsdiat is getting merged to the lef file
+```
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+```
+The contents of the merged.nom.lef file should contain the Macro definition of sky130_vsdinv
 
+![merged](https://user-images.githubusercontent.com/44607144/187702425-e31e6355-f211-436f-99e3-4768add7ec45.png)
 
+# Synthesis
+```
+% run_synthesis
+```
+### Synthesis Report
+
+![stat_synth](https://user-images.githubusercontent.com/44607144/187703037-cb0a06c0-c471-4723-8dd9-e6ce087b4b53.png)
+
+Flop ratio = Number of D Flip flops 
+             ______________________
+             Total Number of cells
+             
+The flop ratio of my design is 0.21229
+
+Timing contraints of design:
+
+![timing const](https://user-images.githubusercontent.com/44607144/187705920-e7c6a25c-c640-441f-a3f0-47e110383352.png)
 
 # Contributors
 * **Himanshu Kumar Rai**
