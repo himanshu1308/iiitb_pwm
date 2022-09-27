@@ -589,7 +589,29 @@ klayout iiitb_pwm_gen.mag
 ![klayout2](https://user-images.githubusercontent.com/44607144/187743956-f544cd60-6e06-4e79-81c2-93dd5b5342f5.png)
 # Post Layout Results
 ### gate count 
+![stat](https://user-images.githubusercontent.com/44607144/192511160-2a3056f2-ecab-434e-84c2-ed8b4c55b4af.png)
+**Gate count = 179**
+### Area
 
+
+![area](https://user-images.githubusercontent.com/44607144/192512642-f352fcb5-400e-4c44-b374-0b7d00a9da8d.png)
+
+**Area = 11773.920 um^2**
+### Performance 
+
+![command](https://user-images.githubusercontent.com/44607144/192513247-96304b73-58ab-4f43-a97f-ee7f7b3b3846.png)
+
+![timing](https://user-images.githubusercontent.com/44607144/192513286-946b2c32-2b0b-49da-9d7c-3ccec891c413.png)
+
+**performance = 1/(clock period-slack = 1/(10-6.63)ps =296.74GHz)**
+### Flop/standard cell 
+![stat](https://user-images.githubusercontent.com/44607144/192515140-8eeddec9-d8a7-418e-a77f-ffe03d5631d6.png)
+
+**Flop ratio = 40/179 = 0.2234**
+
+### Power Performance 
+
+![power](https://user-images.githubusercontent.com/44607144/192515474-d5a5ed04-ee7c-4da8-8c88-8f520ed15ff4.png)
 
 
 
