@@ -587,6 +587,10 @@ klayout iiitb_pwm_gen.mag
 
 *Layout View*
 ![klayout2](https://user-images.githubusercontent.com/44607144/187743956-f544cd60-6e06-4e79-81c2-93dd5b5342f5.png)
+# Post Layout Results
+### gate count 
+
+
 
 
 
