@@ -589,23 +589,29 @@ klayout iiitb_pwm_gen.mag
 ![klayout2](https://user-images.githubusercontent.com/44607144/187743956-f544cd60-6e06-4e79-81c2-93dd5b5342f5.png)
 # Post Layout Results
 ## 1. gate count 
-![stat](https://user-images.githubusercontent.com/44607144/192511160-2a3056f2-ecab-434e-84c2-ed8b4c55b4af.png)
+
+![stat](https://user-images.githubusercontent.com/44607144/192590663-467ec2b4-f89d-44ed-acaa-b2fe688ac9d0.png)
+
+
 **Gate count = 179**
 ## 2. Area
 
+![area](https://user-images.githubusercontent.com/44607144/192590522-0f96dab8-57c4-4cba-8082-a2089daa887a.png)
 
-![area](https://user-images.githubusercontent.com/44607144/192512642-f352fcb5-400e-4c44-b374-0b7d00a9da8d.png)
 
 **Area = 11773.920 um^2**
 ## 3. Performance 
 
 ![command](https://user-images.githubusercontent.com/44607144/192513247-96304b73-58ab-4f43-a97f-ee7f7b3b3846.png)
 
-![timing](https://user-images.githubusercontent.com/44607144/192513286-946b2c32-2b0b-49da-9d7c-3ccec891c413.png)
+![timing](https://user-images.githubusercontent.com/44607144/192590330-fa8cc3ca-68ef-460b-9f9a-3725e889238f.png)
+
 
 **performance = 1/(clock period-slack = 1/(10-6.63)ps =296.74GHz)**
 ## 4. Flop/standard cell 
-![stat](https://user-images.githubusercontent.com/44607144/192515140-8eeddec9-d8a7-418e-a77f-ffe03d5631d6.png)
+
+![flopratio](https://user-images.githubusercontent.com/44607144/192590197-fb0ad6d0-6912-4d5a-8f9f-16ec8cbfe128.png)
+
 
 **Flop ratio = 40/179 = 0.2234**
 
