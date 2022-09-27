@@ -617,14 +617,7 @@ klayout iiitb_pwm_gen.mag
 
 ## 5. Power Performance 
 
-![power](https://user-images.githubusercontent.com/44607144/192515474-d5a5ed04-ee7c-4da8-8c88-8f520ed15ff4.png)
-
-
-
-
-
-
-
+![power](https://user-images.githubusercontent.com/44607144/192591298-952ae780-32e1-4738-9571-2e59e3c96d4c.png)
 
 
 # Contributors
